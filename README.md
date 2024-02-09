@@ -47,7 +47,7 @@ This is the first Palworld API, it's a simple API to get all Palworld Paldex dat
     {
       "id": 85,
       "key": "085",
-      "image": "/public/images/085.png",
+      "image": "/public/images/paldeck/085.png",
       "name": "Relaxaurus",
       "wiki": "https://palworld.fandom.com/wiki/Relaxaurus",
       "types": ["dragon", "water"],
@@ -55,17 +55,20 @@ This is the first Palworld API, it's a simple API to get all Palworld Paldex dat
       "suitability": [
         {
           "type": "watering",
+          "image": "/public/images/works/watering.png",
           "level": 2
         },
         {
           "type": "transporting",
+          "image": "/public/images/works/transporting.png",
           "level": 1
         }
       ],
       "drops": ["high_quality_pal_oil", "ruby"],
       "aura": {
         "name": "hungry_missile",
-        "description": "Can be ridden. Can rapidly fire a missile launcher while mounted."
+        "description": "Can be ridden. Can rapidly fire a missile launcher while mounted.",
+        "tech": null
       },
       "description": "Contrary to its blasé appearance, it's quite ferocious.\nIt perceives everything in its sight as prey and will stop at nothing to devour it.",
       "skills": [
@@ -125,7 +128,27 @@ This is the first Palworld API, it's a simple API to get all Palworld Paldex dat
           "power": 150,
           "description": "Calls down numerous small meteorites and launches them at an enemy.\n"
         }
-      ]
+      ],
+      "stats": {
+        "hp": 110,
+        "attack": {
+          "melee": 110,
+          "ranged": 100
+        },
+        "defense": 70,
+        "speed": {
+          "ride": 800,
+          "run": 650,
+          "walk": 60
+        },
+        "stamina": 100,
+        "support": 100
+      },
+      "asset": "LazyDragon",
+      "genus": "monster",
+      "rarity": 8,
+      "price": 10240,
+      "size": "xl"
     }
   ],
   "page": 1,
@@ -213,6 +236,38 @@ See the current features!
 - Eslint and Prettier
 - Tests
 
+## :test_tube: Testing
+
+Testing is a crucial part of maintaining the quality and reliability of the Palworld Paldex API. This section explains how to run the tests and provides a brief overview of the testing setup.
+
+### Running the Tests
+
+To ensure that the API functions as expected, follow these steps to run the tests:
+
+```bash
+$ bun test
+```
+
+This will run all the automated tests and display the results.
+
+### Types of Tests (WIP)
+
+The testing suite includes the following types of tests:
+
+- **Unit Tests**: These tests cover individual functions and components to ensure they behave as expected in isolation.
+
+### Test Coverage
+
+We aim to cover as much of the codebase as possible with our tests to maintain high standards of quality and reliability. Test coverage metrics are regularly updated and can be viewed in the test reports.
+
+### Continuous Integration
+
+WIP
+
+### Contributing to Tests
+
+Contributions to improve or add tests are always welcome. If you're interested in contributing, please follow the guidelines in the [Contribute](#busts_in_silhouette-contribute) section.
+
 ## :busts_in_silhouette: Contribute
 
 - Fork this repository;
@@ -238,3 +293,4 @@ This project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) 
 ## Contributions
 
 - [Discord Bot Using this API](https://github.com/nibalizer/palbot-rs/)
+- [Mobile APP - PalPad](https://github.com/Juanvic/PalPad)
